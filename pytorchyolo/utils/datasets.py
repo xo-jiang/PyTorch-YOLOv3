@@ -86,6 +86,7 @@ class ListDataset(Dataset):
         try:
 
             img_path = self.img_files[index % len(self.img_files)].rstrip()
+            img_path = '.' + img_path
 
             img = np.array(Image.open(img_path).convert('RGB'), dtype=np.uint8)
         except Exception:
@@ -97,6 +98,7 @@ class ListDataset(Dataset):
         # ---------
         try:
             label_path = self.label_files[index % len(self.img_files)].rstrip()
+            label_path = '.' + label_path
 
             # Ignore warning if file is empty
             with warnings.catch_warnings():

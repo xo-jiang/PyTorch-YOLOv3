@@ -9,7 +9,7 @@ license = "GPL-3.0"
 
 [tool.poetry.dependencies]
 python = ">=3.8,<4.0"
-torch = ">=1.10.1, < 1.13.0"
+torch = ">=1.10.1, < 1.13.1"
 torchvision = ">=0.13.1"
 matplotlib = "^3.3.3"
 tensorboard = "^2.10.0"
@@ -39,3 +39,8 @@ build-backend = "poetry.core.masonry.api"
 yolo-detect = "pytorchyolo.detect:run"
 yolo-train = "pytorchyolo.train:run"
 yolo-test = "pytorchyolo.test:run"
+
+[[tool.poetry.source]]
+name = "tsinghua-mirror"
+url = "https://pypi.tuna.tsinghua.edu.cn/simple"
+default = true
